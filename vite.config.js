@@ -23,7 +23,7 @@ export default defineConfig({
         strictPort: false,
         hmr: {
             // host: "192.168.0.105",
-            host: "192.168.100.25",
+            host: "192.168.0.10",
             // host: "10.194.145.250",
         },
         cors: true, // Izinkan akses lintas perangkat

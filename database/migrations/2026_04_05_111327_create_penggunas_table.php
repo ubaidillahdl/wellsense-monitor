@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('pengguna', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->date('tanggal_lahir');
             $table->string('email')->unique();
             $table->string('kata_sandi');
             $table->rememberToken();

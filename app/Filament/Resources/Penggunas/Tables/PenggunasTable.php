@@ -20,17 +20,24 @@ class PenggunasTable
                     ->width('17ch')
                     ->limit(17)
                     ->searchable(),
-                TextColumn::make('email')
-                    ->label('Alamat Email')
+                TextColumn::make('jenis_kelamin')
+                    ->label('Jenis Kelamin')
+                    ->formatStateUsing(fn(string $state) => $state == 'L' ? 'Laki-laki' : 'Perempuan')
                     ->width('20ch')
                     ->limit(20)
                     ->searchable()
                     ->visibleFrom('md'),
-                TextColumn::make('kata_sandi')
+                TextColumn::make('tanggal_lahir')
+                    ->label('Tanggal Lahir')
                     ->wrap()
                     ->width('15')
                     ->limit(15)
-                    ->label('Kata Sandi')
+                    ->visibleFrom('xl'),
+                TextColumn::make('email')
+                    ->label('Alamat Email')
+                    ->wrap()
+                    ->width('15')
+                    ->limit(15)
                     ->visibleFrom('xl'),
                 TextColumn::make('created_at')
                     ->label('Terdaftar Pada')
